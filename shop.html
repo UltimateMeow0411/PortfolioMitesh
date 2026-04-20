@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop - Orangutan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">Orangutan</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="teams.html">Teams</a>
+        <a href="news.html">News</a>
+        <a href="shop.html">Shop</a>
+        <a href="partners.html">Partners</a>
+        <a href="contact.html">Contact</a>
+        <button onclick="toggleTheme()">Theme</button>
+    </div>
+</nav>
+
+<section class="shop-hero">
+    <div class="shop-hero-copy">
+        <p class="eyebrow">Official Merch Drop</p>
+        <h1>Suit up like the squad.</h1>
+        <p>Pick your match-day essentials and build a quick order with live pricing.</p>
+    </div>
+    <div class="shop-highlight card">
+        <p class="eyebrow">Fan Favorite</p>
+        <h2>Pro Match Jersey</h2>
+        <span>The same bold orange energy, now featured with your uploaded product visuals.</span>
+    </div>
+</section>
+
+<section class="section shop-layout">
+    <div class="shop-products">
+        <div class="section-heading">
+            <h2>Featured Products</h2>
+            <p>Filter the collection and use the counters to build a quick cart.</p>
+        </div>
+
+        <div class="shop-filters">
+            <button class="filter-chip active" type="button" onclick="filterProducts('all', this)">All</button>
+            <button class="filter-chip" type="button" onclick="filterProducts('jersey', this)">Jersey</button>
+            <button class="filter-chip" type="button" onclick="filterProducts('hoodie', this)">Hoodies</button>
+            <button class="filter-chip" type="button" onclick="filterProducts('travel', this)">Travel</button>
+        </div>
+
+        <div class="grid">
+            <div class="card product" data-category="jersey">
+                <div class="img-box">
+                    <img src="assets/jersey.webp" alt="Orangutan Jersey">
+                </div>
+                <h3>Orangutan Jersey</h3>
+                <p class="price">Rs. 999</p>
+                <p class="product-copy">Breathable match jersey with bold orange detailing.</p>
+                <div class="counter">
+                    <button onclick="changeQty('jersey', -1)">-</button>
+                    <span id="jersey">0</span>
+                    <button onclick="changeQty('jersey', 1)">+</button>
+                </div>
+            </div>
+
+            <div class="card product" data-category="hoodie">
+                <div class="img-box">
+                    <img src="assets/hoodie-orange.webp" alt="Orangutan orange hoodie">
+                </div>
+                <h3>Orange Hoodie</h3>
+                <p class="price">Rs. 1,499</p>
+                <p class="product-copy">Heavyweight streetwear layer for streams, scrims, and travel.</p>
+                <div class="counter">
+                    <button onclick="changeQty('hoodieOrange', -1)">-</button>
+                    <span id="hoodieOrange">0</span>
+                    <button onclick="changeQty('hoodieOrange', 1)">+</button>
+                </div>
+            </div>
+
+            <div class="card product" data-category="hoodie">
+                <div class="img-box">
+                    <img src="assets/hoodie-black.webp" alt="Orangutan black hoodie">
+                </div>
+                <h3>Black Hoodie</h3>
+                <p class="price">Rs. 1,599</p>
+                <p class="product-copy">Stealth black finish with orange drawcords and subtle team branding.</p>
+                <div class="counter">
+                    <button onclick="changeQty('hoodieBlack', -1)">-</button>
+                    <span id="hoodieBlack">0</span>
+                    <button onclick="changeQty('hoodieBlack', 1)">+</button>
+                </div>
+            </div>
+
+            <div class="card product" data-category="travel">
+                <div class="img-box">
+                    <img src="assets/travel-polo.webp" alt="Orangutan travel polo">
+                </div>
+                <h3>Travel Polo</h3>
+                <p class="price">Rs. 1,199</p>
+                <p class="product-copy">Clean black polo designed for travel days, events, and everyday wear.</p>
+                <div class="counter">
+                    <button onclick="changeQty('travelPolo', -1)">-</button>
+                    <span id="travelPolo">0</span>
+                    <button onclick="changeQty('travelPolo', 1)">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <aside class="card cart-summary">
+        <p class="eyebrow">Order Summary</p>
+        <h2>Your Cart</h2>
+        <div class="summary-row">
+            <span>Items</span>
+            <strong id="cart-items">0</strong>
+        </div>
+        <div class="summary-row">
+            <span>Subtotal</span>
+            <strong id="cart-total">Rs. 0</strong>
+        </div>
+        <div class="summary-row">
+            <span>Shipping</span>
+            <strong id="cart-shipping">Free</strong>
+        </div>
+        <p class="summary-note">Free shipping unlocks automatically on every merch drop order this week.</p>
+        <button class="checkout-btn">Checkout</button>
+    </aside>
+</section>
+
+<footer>
+    <p>Shop the latest Orangutan drops and rep the team everywhere.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

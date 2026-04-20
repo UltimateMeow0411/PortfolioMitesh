@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact - Orangutan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">Orangutan</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="teams.html">Teams</a>
+        <a href="news.html">News</a>
+        <a href="shop.html">Shop</a>
+        <a href="partners.html">Partners</a>
+        <a href="contact.html">Contact</a>
+        <button onclick="toggleTheme()">Theme</button>
+    </div>
+</nav>
+
+<section class="page-hero compact-hero">
+    <p class="eyebrow">Contact Us</p>
+    <h1>Reach Orangutan for collaborations, support, or fan messages.</h1>
+    <p>Use the form below to share your details and message. Your submission is stored locally in the browser for this site demo, and the social links take you to Orangutan's official channels.</p>
+</section>
+
+<section class="section contact-layout">
+    <div class="card contact-card">
+        <p class="eyebrow">Send a Message</p>
+        <h2>Contact Form</h2>
+        <form id="contactForm" class="contact-form">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Enter your email" required>
+
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="Partnership, fan message, support..." required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+
+            <button type="submit" class="checkout-btn">Submit</button>
+            <p id="formStatus" class="form-status"></p>
+        </form>
+    </div>
+
+    <div class="contact-side">
+        <div class="card social-card">
+            <p class="eyebrow">Official Socials</p>
+            <h2>Follow Orangutan</h2>
+            <a class="social-link" href="https://www.instagram.com/orangutan.gg/" target="_blank" rel="noopener noreferrer">Instagram: @orangutan.gg</a>
+            <a class="social-link" href="https://twitter.com/orangutan_gg" target="_blank" rel="noopener noreferrer">Twitter / X: @orangutan_gg</a>
+            <a class="social-link" href="https://www.youtube.com/channel/UCUm7FZcnD_4n0S4btbHL1HQ" target="_blank" rel="noopener noreferrer">YouTube: Orangutan Official</a>
+        </div>
+
+        <div class="card social-card">
+            <p class="eyebrow">Saved Leads</p>
+            <h2>Recent Form Entries</h2>
+            <div id="savedMessages" class="saved-messages">
+                <p>No submissions yet.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>Contact the Orangutan team and stay connected through every platform.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

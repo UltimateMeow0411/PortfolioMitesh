@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News - Orangutan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">Orangutan</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="teams.html">Teams</a>
+        <a href="news.html">News</a>
+        <a href="shop.html">Shop</a>
+        <a href="partners.html">Partners</a>
+        <a href="contact.html">Contact</a>
+        <button onclick="toggleTheme()">Theme</button>
+    </div>
+</nav>
+
+<section class="page-hero compact-hero">
+    <p class="eyebrow">Live News</p>
+    <h1>Indian gaming community news, pulled together in one live newsroom.</h1>
+    <p>This page aggregates live updates from Liquipedia, Orangutan TV, X, and an in-browser Instagram fetch attempt, then lets visitors use the floating bot for quick answers.</p>
+</section>
+
+<section class="section">
+    <div class="section-heading">
+        <p class="eyebrow">Source Health</p>
+        <h2>Real-time source checks every time you refresh.</h2>
+        <p>Liquipedia, YouTube, and X are live-first. Instagram is also attempted, but Meta can still rate-limit or block browser requests depending on the environment.</p>
+    </div>
+
+    <div id="sourceStatusGrid" class="source-status-grid"></div>
+
+    <div class="news-shell card">
+        <div class="news-shell-top">
+            <div>
+                <span class="live-pill">Live Watch</span>
+                <h3>India Gaming Pulse</h3>
+                <p class="summary-note">Use refresh to re-pull the newest competitive changes, creator uploads, and team social updates.</p>
+            </div>
+            <button type="button" id="refreshNewsButton">Refresh Feed</button>
+        </div>
+
+        <div class="news-status-row">
+            <p id="newsStatus" class="news-status">Loading the latest gaming headlines...</p>
+            <p id="newsMeta" class="news-meta"></p>
+        </div>
+
+        <div id="newsGrid" class="news-grid"></div>
+    </div>
+</section>
+
+<footer>
+    <p>Follow the latest Orangutan and Indian gaming community movement in one place.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
